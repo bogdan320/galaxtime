@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="newWorldTextViewStyle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15sp</item>
+    	<item name="android:textSize">15sp</item>
+    </style>
+    <style name="newWorldEditTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">150sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">15sp</item>
+    	<item name="android:textSize">15sp</item>
+    </style>
+    <style name="newWorldSeparator" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">2px</item>
+    	<item name="android:layout_marginLeft">14px</item>
+    	<item name="android:layout_marginRight">14px</item>
+    	<item name="android:background">#ff0000</item>
+    </style>
+    <style name="newWorldRadioButtonStyle" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginLeft">25sp</item>
+    </style>
+    <style name="AppTheme" parent="android:Theme.Light" />
+</resources>

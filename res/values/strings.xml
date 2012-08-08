@@ -1,0 +1,42 @@
+<resources>
+
+    <string name="app_name">GalaXtime</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_time_configure">TimeConfigureActivity</string>
+    
+    <string name="planet">Планета</string>
+    <string name="country">Страна</string>
+    <string name="city">Город</string>
+    <string name="date_consists">Дата состоит из:</string>
+    <string name="day_year">день года и год</string>
+    <string name="day_month_year">день месяяца, месяц и год</string>
+    <string name="daysInYear">Дней в году</string>
+    <string name="daysInMonth">Дней в месяце</string>
+    <string name="monthInYear">Месяцев в году</string>
+    <string name="hoursInDay">Часов в дне</string>
+    <string name="minutesInHour">Минут в часе</string>
+    <string name="secsInMinute">Секунд в минуте</string>
+    <string name="dateView">Отображение даты:</string>
+    <string name="dateFirst">DD.YY</string>
+    <string name="dateSecond">DD.MM.YY</string>
+    <string name="dateThird">DD/YY</string>
+    <string name="dateFourth">DD/MM/YY</string>
+    <string name="dateFifth">MM/DD/YY</string>
+    <string name="startTime">Начать отсчет времени с:</string>
+    <string name="startYear">Год</string>
+    <string name="startMonth">Месяц</string>
+    <string name="startDay">День</string>
+    <string name="startHour">Час</string>
+    <string name="startMinute">Минута</string>
+    <string name="maxAndMinTemperature">Максимальная и минимальная температура:</string>
+	<string name="celsij">Цельсий</string>
+	<string name="farengeit">Фаренгейт</string>
+	<string name="kelvin">Кельвин</string> 
+    
+    <string name="edit">Изменить</string>
+    <string name="delete">Удалить</string>
+    
+    <string name="createWorld">Создать/изменить планету</string>
+
+
+</resources>

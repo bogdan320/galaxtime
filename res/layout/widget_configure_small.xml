@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="146dp"
+    android:background="@drawable/widget_background" >
+
+    <TextView
+        android:id="@+id/widget_small_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="6dp"
+        android:text="00:00"
+        android:textColor="#ff0000"
+        android:textSize="56dp" />
+
+    <ImageView
+        android:id="@+id/widget_small_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/widget_small_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentTop="true"
+        android:text="TextView"
+        android:textColor="#ffffff"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/widget_small_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/widget_small_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="30"
+        android:textColor="#ffffff" />getStartingYear()
+
+    <TextView
+        android:id="@+id/widget_small_planetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/widget_small_image"
+        android:text="Земля"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

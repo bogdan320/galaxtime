@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical" >
+		    
+		    <RelativeLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        <EditText
+		            android:id="@+id/new_editText_planet"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/planet" />	
+		    </RelativeLayout>
+		
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" >
+		        <EditText
+		            android:id="@+id/new_editText_country"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true" />
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/country" />
+		    </RelativeLayout>
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <EditText
+		            android:id="@+id/new_editText_city"
+					style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true">
+		        </EditText>
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/city" />
+		    </RelativeLayout>
+		
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		        <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content" >
+		            <TextView
+		                style="@style/newWorldTextViewStyle"
+		                android:layout_alignParentLeft="true"
+		                android:layout_centerVertical="true"
+		                android:text="@string/date_consists" />
+		        </RelativeLayout>
+		    	<RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content" >
+		            <RadioGroup
+		                android:id="@+id/new_RadioGroup_dateType"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentTop="true">
+		                <RadioButton
+		                    android:id="@+id/new_RadioBut_daysAndYear"
+		                    style="@style/newWorldRadioButtonStyle"
+		                    android:checked="true"
+		                    android:text="@string/day_year" />
+		                <RadioButton
+		                    android:id="@+id/new_RadioBut_daysAndMonthAndYear"
+		                    style="@style/newWorldRadioButtonStyle"
+		                    android:text="@string/day_month_year" />
+		            </RadioGroup>
+		        </RelativeLayout>
+		        
+		    <TextView style="@style/newWorldSeparator"/>
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <EditText
+		            android:id="@+id/new_editText_daysInYear"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            android:id="@+id/new_textView_DaysIn"
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/daysInYear" />
+		    </RelativeLayout>
+			
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <EditText
+		            android:id="@+id/new_editText_monthInYear"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/monthInYear" />
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <EditText
+		            android:id="@+id/new_EditText_hoursInDay"
+			        style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+					android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/hoursInDay"/>
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <EditText
+		            android:id="@+id/new_editText_minutesInHour"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true"/>
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/minutesInHour" />
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <EditText
+		            android:id="@+id/new_editText_SecsInMinute"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/secsInMinute" />
+		    </RelativeLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/dateView" />
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <RadioGroup
+		            android:id="@+id/new_RadioGroup_dateView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true">
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_DDxYY"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:checked="true"
+		                android:text="@string/dateFirst" />
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_DDxMMxYY"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/dateSecond" />
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_DD_YY"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/dateThird" />
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_DD_MM_YY"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/dateFourth" />
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_MM_DD_YY"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/dateFifth" />
+		        </RadioGroup>
+		    </RelativeLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/startTime" />
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        <EditText
+		            android:id="@+id/new_editText_startYear"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/startYear" />	
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        <EditText
+		            android:id="@+id/new_editText_startMonth"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/startMonth" />	
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        <EditText
+		            android:id="@+id/new_editText_startDay"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/startDay" />	
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        <EditText
+		            android:id="@+id/new_editText_startHour"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/startHour" />	
+		    </RelativeLayout>
+		    <RelativeLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        <EditText
+		            android:id="@+id/new_editText_startMinute"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" />
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/startMinute" />	
+		    </RelativeLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/maxAndMinTemperature" />
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" >
+		        <RadioGroup
+		            android:id="@+id/new_RadioBut_typeTemp"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true">
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_celsij"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:checked="true"
+		                android:text="@string/celsij" />
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_farengeit"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/farengeit" />
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_kelvin"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/kelvin" />
+		        </RadioGroup>
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" >
+		        <RadioGroup
+		            android:id="@+id/maxTempSign"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true">
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_maxTempPlus"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:checked="true"
+		                android:text="+" />
+		            <RadioButton
+		                android:id="@+id/new_RadioBut_maxTempPlus"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="-" />
+		        </RadioGroup>
+
+		    </RelativeLayout>
+		        
+		    <Button
+				android:id="@+id/button_saveWorld"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/createWorld" />
+    	</LinearLayout>
+    </ScrollView>
+</LinearLayout>
