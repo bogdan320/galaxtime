@@ -45,7 +45,6 @@ public class BaseProvider extends ContentProvider{
 
 	@Override
 	public String getType(Uri arg0) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -56,24 +55,14 @@ public class BaseProvider extends ContentProvider{
 		}
 		SQLiteDatabase db;
 		db=base.getWritableDatabase();
-		if(values.get(ColumnNames.COUNTRY_NAME).equals(""))
-			values.put(ColumnNames.COUNTRY_NAME, "Unknown country");
-		if(values.get(ColumnNames.CITY_NAME).equals(""))
-			values.put(ColumnNames.CITY_NAME, "Unknown city");
-		/*if(values.get(ColumnNames.MAX_TEMPERATURE)==null)
-			values.put(ColumnNames.MAX_TEMPERATURE, "день");
-		if(values.get(ColumnNames.MIN_TEMPERATURE)==null)
-			values.put(ColumnNames.MIN_TEMPERATURE, "день");*/
-		if(values.get(ColumnNames.COLDEST_TIME)==null)
-			values.put(ColumnNames.COLDEST_TIME, -1);
-		if(values.get(ColumnNames.WARMEST_TIME)==null)
-			values.put(ColumnNames.WARMEST_TIME, -1);
+		if(values.get(ColumnNames.COLDEST_TIME).equals(""))
+			values.put(ColumnNames.COLDEST_TIME, "-1");
+		if(values.get(ColumnNames.WARMEST_TIME).equals(""))
+			values.put(ColumnNames.WARMEST_TIME, "-1");
 		if(values.get(ColumnNames.STARTING_YEAR).equals(""))
-			values.put(ColumnNames.STARTING_YEAR, "0");
-		if(values.get(ColumnNames.STARTING_MONTH).equals(""))
-			values.put(ColumnNames.STARTING_MONTH, "0");
+			values.put(ColumnNames.STARTING_YEAR, "1");
 		if(values.get(ColumnNames.STARTING_DAY).equals(""))
-			values.put(ColumnNames.STARTING_DAY, "0");
+			values.put(ColumnNames.STARTING_DAY, "1");
 		if(values.get(ColumnNames.STARTING_HOUR).equals(""))
 			values.put(ColumnNames.STARTING_HOUR, "0");
 		if(values.get(ColumnNames.STARTING_MINUTE).equals(""))
@@ -122,7 +111,7 @@ public class BaseProvider extends ContentProvider{
 			case MATCHER_ITEM:
 				String row=uri.getPathSegments().get(1);
 				return db.update(BaseHelper.TABLE_NAME, values, BaseHelper._ID+"="+row+
-						(TextUtils.isEmpty(where)?"":" AND ("+where+")"), whereArgs);
+					(TextUtils.isEmpty(where)?"":" AND ("+where+")"), whereArgs);
 		}
 		throw new SQLException("Invalid uri "+uri);
 	}

@@ -6,35 +6,84 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:icon="@drawable/icon"
+        android:label="@string/app_name">
         <provider android:name="com.galaxtime.database.BaseProvider"
             android:authorities="com.galaxtime.database.Planets"/>
         
-        <receiver android:name=".widget.WidgetProvider">
+        <receiver android:name=".widget.widgetSmall.WidgetProviderSmall"
+            android:label="@string/app_name_small">
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_provider_small"/>
             <intent-filter >
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-                <action android:name="com.galaxtime.widget.ACTION_WIDGET_RECEIVER"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
         
-        <activity android:name=".widget.WidgetConfigure">
+        <receiver android:name=".widget.widgetMedium.WidgetProviderMedium"
+            android:label="@string/app_name_medium">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider_medium"/>
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".widget.widgetLarge.WidgetProviderLarge"
+            android:label="@string/app_name_large">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider_large"/>
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
+        <activity android:name=".widget.widgetLarge.WidgetConfigureLarge">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".widget.widgetSmall.WidgetConfigureSmall">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".widget.widgetMedium.WidgetConfigureMedium">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
         </activity>
         
-        <activity android:name=".widget.CreateNewWorld">
+        <activity android:name=".widget.CreateNewWorld"/>
+        <activity android:name=".widget.UpdateUtils"/>
+        <activity android:name=".widget.Prefs"/>
+        
+        <activity android:name=".program.InfoActivity"/>
+        <activity android:name=".program.PlanetList">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <service android:name=".widget.updateService"
+        
+        <receiver android:name=".widget.widgetLarge.updateServiceLarge"
             	 android:enabled="true">
-        </service>
+        </receiver>
+        <receiver android:name=".widget.widgetMedium.updateServiceMedium"
+            	 android:enabled="true">
+        </receiver>
+        <receiver android:name=".widget.widgetSmall.updateServiceSmall"
+            	 android:enabled="true">
+        </receiver>
     </application>
 
 </manifest>

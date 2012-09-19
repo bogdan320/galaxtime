@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            <ImageView
+                android:id="@+id/info_imageView_PlanetIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/plan_12" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    style="@style/info1TextViewStyle"
+                    android:text="@string/planet" />
+                <TextView
+                    android:id="@+id/info_textView_planet"
+                    style="@style/info2TextViewStyle" />
+                <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/country" />
+		        <TextView
+		            android:id="@+id/info_textView_country"
+		            style="@style/info2TextViewStyle" />
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/city" />
+		        <TextView
+		            android:id="@+id/info_textView_city"
+		            style="@style/info2TextViewStyle" />
+            </LinearLayout>
+
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/earthDaysInYear" />
+		        <TextView
+		            android:id="@+id/info_textView_EarthDaysInYear"
+		            style="@style/info2TextViewStyle"/>
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/monthInYear" />
+		        <TextView
+		            android:id="@+id/info_textView_monthInYear"
+		            style="@style/info2TextViewStyle" />
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/daysInMonth" />
+		        <TextView
+		            style="@style/info2TextViewStyle"
+		            android:id="@+id/info_textView_daysInMonth"/>
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/daysInYear" />
+		        <TextView
+		            android:id="@+id/info_textView_daysInYear"
+		            style="@style/info2TextViewStyle"/>
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/hoursInDay"/>
+		        <TextView
+		            android:id="@+id/info_textView_hoursInDay"
+			        style="@style/info2TextViewStyle"/>
+		        <TextView
+					style="@style/info1TextViewStyle"
+		            android:text="@string/minutesInHour" />
+		        <TextView
+		            android:id="@+id/info_textView_minutesInHour"
+		            style="@style/info2TextViewStyle"/>
+		        <TextView
+					style="@style/info1TextViewStyle"
+		            android:text="@string/secsInMinute" />
+		        <TextView
+		            android:id="@+id/info_textView_SecsInMinute"
+		            style="@style/info2TextViewStyle"/>
+		    </LinearLayout>
+
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/startTime" />
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/startYear" />
+		        <TextView
+		            android:id="@+id/info_TextView_startYear"
+		            style="@style/info2TextViewStyle"/>	
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/startDay" />
+		        <TextView
+		            android:id="@+id/info_TextView_startDay"
+		            style="@style/info2TextViewStyle"/>	
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/startHour" />
+		        <TextView
+		            android:id="@+id/info_TextView_startHour"
+		            style="@style/info2TextViewStyle"/>	
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/startMinute" />
+		        <TextView
+		            android:id="@+id/info_TextView_startMinute"
+		            style="@style/info2TextViewStyle"/>	
+		    </LinearLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/maxTemperature" />
+		        <TextView
+		            style="@style/info2TextViewStyle"
+		            android:id="@+id/info_textView_maxTemperature"/>
+		        <TextView
+		            style="@style/info1TextViewStyle"
+		            android:text="@string/minTemperature" />
+		        <TextView
+		            style="@style/info2TextViewStyle"
+		            android:id="@+id/info_textView_minTemperature"/>
+		        <TextView
+					style="@style/info1TextViewStyle"
+		            android:text="@string/theWarmestTime" />
+		        <TextView
+		            style="@style/info2TextViewStyle"
+		            android:id="@+id/info_textView_warmestTime"/>
+		        <TextView
+					style="@style/info1TextViewStyle"
+		            android:text="@string/theColdestTime" />
+		        <TextView
+		            style="@style/info2TextViewStyle"
+		            android:id="@+id/info_textView_coldestTime"/>
+		    </LinearLayout>
+		    		    
+		    <Button
+				android:id="@+id/info_button_close"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/ok" />
+    	</LinearLayout>
+    </ScrollView>
+</LinearLayout>

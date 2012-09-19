@@ -40,7 +40,7 @@ public abstract class APrefWidgetModel implements IWidgetSaveContract{
 		prefs.putString(newkey, value);
 	}
 	
-	private String getStoredKeyForFieldName(String key) {
+	protected String getStoredKeyForFieldName(String key) {
 		return key+"_"+iid;
 	}
 	
@@ -84,5 +84,20 @@ public abstract class APrefWidgetModel implements IWidgetSaveContract{
 		SharedPreferences.Editor prefs=context.getSharedPreferences(prefname, 0).edit();
 		prefs.clear();
 		prefs.commit();
+	}
+	public void removePrefs(Context context) {
+		Map<String, String> keyValuePairs = getPrefsToSave();
+		if (keyValuePairs == null) {
+			return;
+		}
+		SharedPreferences.Editor prefs = context.getSharedPreferences(getPrefName(), 0).edit();
+		for (String key : keyValuePairs.keySet()) {
+			removePref(prefs, key);
+		}
+		prefs.commit();
+	}
+	private void removePref(SharedPreferences.Editor prefs, String key) {
+		String newkey = getStoredKeyForFieldName(key);
+		prefs.remove(newkey);
 	}
 }

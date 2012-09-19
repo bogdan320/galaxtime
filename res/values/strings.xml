@@ -1,21 +1,25 @@
 <resources>
 
     <string name="app_name">GalaXtime</string>
+    <string name="app_name_small">GalaXtime (1x4)</string>
+    <string name="app_name_medium">GalaXtime (2x4)</string>
+    <string name="app_name_large">GalaXtime (3x4)</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_time_configure">TimeConfigureActivity</string>
     
-    <string name="planet">Планета</string>
+    <string name="planet">*Планета</string>
     <string name="country">Страна</string>
     <string name="city">Город</string>
     <string name="date_consists">Дата состоит из:</string>
     <string name="day_year">день года и год</string>
-    <string name="day_month_year">день месяяца, месяц и год</string>
-    <string name="daysInYear">Дней в году</string>
-    <string name="daysInMonth">Дней в месяце</string>
-    <string name="monthInYear">Месяцев в году</string>
-    <string name="hoursInDay">Часов в дне</string>
-    <string name="minutesInHour">Минут в часе</string>
-    <string name="secsInMinute">Секунд в минуте</string>
+    <string name="day_month_year">день месяца, месяц и год</string>
+    <string name="earthDaysInYear">*Земных суток в году вашей планеты</string>
+    <string name="daysInYear">*Суток в году вашей планеты</string>
+    <string name="daysInMonth">Суток в месяце вашей планеты</string>
+    <string name="monthInYear">Месяцев в году вашей планеты</string>
+    <string name="hoursInDay">*Часов в сутках вашей планеты</string>
+    <string name="minutesInHour">*Минут в часе вашей планеты</string>
+    <string name="secsInMinute">Секунд в минуте вашей планеты</string>
     <string name="dateView">Отображение даты:</string>
     <string name="dateFirst">DD.YY</string>
     <string name="dateSecond">DD.MM.YY</string>
@@ -28,15 +32,71 @@
     <string name="startDay">День</string>
     <string name="startHour">Час</string>
     <string name="startMinute">Минута</string>
+    <string name="maxTemperature">Максимальная температура:</string>
+    <string name="minTemperature">Минимальная температура:</string>
     <string name="maxAndMinTemperature">Максимальная и минимальная температура:</string>
 	<string name="celsij">Цельсий</string>
 	<string name="farengeit">Фаренгейт</string>
 	<string name="kelvin">Кельвин</string> 
-    
+	<string name="plus">+</string>
+	<string name="minus">-</string> 
+	<string name="theColdestTime">Самое холодное время в сутках(час):</string>
+	<string name="theWarmestTime">Самое теплое время в сутках(час):</string> 
+    <string name="yourBirthday">Введите вашу дату рождения по земному времени</string> 
+    <string name="birthdayAlarm">Поздравить с днем рождения</string>
+    <string name="weather">Погодные явления планеты: </string>
+    <string name="rain">Дождь</string>
+    <string name="snow">Снег</string>
+    <string name="storm">Ураган</string>
+    <string name="volcano">Вулкан</string>
+    <string name="other">Другое</string>    
+    <string name="min">min</string>
+    <string name="max">max</string>
+    <string name="text_instruction">Инструкция</string>
+    <string name="text_send_mail">Sending mail...</string>
+    <string name="text_email_message">Mail.</string>
+    <string name="change">Изменить</string>
+    <string name="not_change">Не изменять</string>
+    <string name="birthdayNotification">День рождения на планете</string>
+    <string name="happyBirthday">С днем рождения!</string>
+    <string name="nowYouHave">Теперь вам</string>
+	<string name="years">лет</string>
+	<string name="ok">ok</string>
+	
     <string name="edit">Изменить</string>
     <string name="delete">Удалить</string>
-    
+    <string name="deletedPlanet">Удалена планета с названием</string>
     <string name="createWorld">Создать/изменить планету</string>
+    
+    <string name="night">Ночь</string>
+    <string name="day">День</string>
+    <string name="morning">Утро</string>
+    <string name="evening">Вечер</string>
+    
+    <string name="settings">Настройки</string>
+    <string name="otherApps">Другие приложения</string>
+    <string name="share">Поделиться</string>
+    <string name="questions">Предложения, вопросы</string>
+    <string name="instruction">Инструкция</string>
+    <string name="rating">Поставить нам оценку</string>
+    
+    <string name="name">Имя</string>
+    <string name="prefs_name">name</string>
+    <string name="nameView">Отображение имени на виджете</string>
+    <string name="prefs_nameView">nameView</string>
+    <string name="nameViewSummary">Выберите, что будет отображаться в качестве имени</string>
+    <string name="prefs_temperature">temperature</string>
+    <string name="temperature">Температура</string>
+    <string name="prefs_timeOfDay">timeOfDay</string>
+    <string name="timeOfDay">Время суток</string>
+    <string name="prefs_age">age</string>
+    <string name="age">Возраст</string>
+    <string name="prefs_weather">weather</string>
+    <string name="weather1">Погодные явления</string>
+    
+    <string name="period_pref">period</string>
+    
+    <string name="enterOtherWeather">Введите погодное условие планеты:</string>  
 
 
 </resources>

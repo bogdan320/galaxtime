@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_large">
+
+	<ImageView
+        android:id="@+id/widget_large_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="15dp"/>
+	<ImageView 
+	    android:id="@+id/widget_large_time"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/widget_small_date" />
+	<RelativeLayout
+	    android:layout_width="200dp"
+	    android:layout_height="fill_parent"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginRight="6dp" >
+	    <ImageView
+	        android:id="@+id/widget_large_image"
+	        android:layout_width="180dp"
+	        android:layout_height="180dp"
+	        android:layout_alignParentRight="true"
+	   		android:layout_centerVertical="true"
+	        android:src="@drawable/plan_1"  />
+	    <TextView
+	        android:id="@+id/widget_large_planetName"
+	        style="@style/largeWidgetTextStyle"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="15dp"
+	        android:text="planet" />
+	    <TextView
+		    android:id="@+id/widget_large_age"
+		    style="@style/largeWidgetTextStyle"
+		    android:layout_alignParentBottom="true"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginBottom="10dp"
+		    android:text="age"/>
+	</RelativeLayout>
+
+	<TextView
+	    android:id="@+id/widget_large_temperature"
+	    style="@style/largeWidgetTextStyle"
+	    android:layout_below="@+id/widget_large_timeOfDay"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="25dp"
+	    android:text="Temperature" />
+	
+	<TextView
+	    android:id="@+id/widget_large_weather"
+	    style="@style/largeWidgetTextStyle"
+	    android:layout_below="@+id/widget_large_temperature"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="25dp"
+	    android:text="Weather" />
+
+	<TextView
+	    android:id="@+id/widget_large_timeOfDay"
+	    style="@style/largeWidgetTextStyle"
+	    android:layout_below="@+id/widget_large_time"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginTop="30dp"
+	    android:text="TimeOfDay"/>
+
+</RelativeLayout>

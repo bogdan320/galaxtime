@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<CheckBoxPreference 
+	    android:key="@string/prefs_name"  
+	    android:title="@string/name"
+	    android:defaultValue="true"/>
+	<ListPreference
+	    android:key="@string/prefs_nameView"
+	    android:title="@string/nameView"
+	    android:summary="@string/nameViewSummary"
+	    android:defaultValue="1"
+	    android:entries="@array/nameView"
+	    android:entryValues="@array/nameView"/>
+	<CheckBoxPreference 
+	    android:key="@string/prefs_temperature"  
+	    android:title="@string/temperature"
+	    android:defaultValue="true"/>
+	<CheckBoxPreference 
+	    android:key="@string/prefs_weather"  
+	    android:title="@string/weather1"
+	    android:defaultValue="true"/>
+	<CheckBoxPreference 
+	    android:key="@string/prefs_timeOfDay"  
+	    android:title="@string/timeOfDay"
+	    android:defaultValue="true"/>
+	<CheckBoxPreference 
+	    android:key="@string/prefs_age"  
+	    android:title="@string/age"
+	    android:defaultValue="true"/>
+
+</PreferenceScreen>

@@ -1,171 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="match_parent" >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-        
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		    android:layout_width="fill_parent"
-		    android:layout_height="fill_parent"
-		    android:orientation="vertical" >
-		    
-		    <RelativeLayout
-		        android:layout_width="wrap_content"
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    style="@style/newWorldTextViewStyle"
+                    android:text="@string/planet" />
+                <EditText
+                    android:id="@+id/new_editText_planet"
+                    style="@style/newWorldEditTextStyle" />
+            </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
-		        android:orientation="horizontal" >
-		        <EditText
-		            android:id="@+id/new_editText_planet"
-		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
+		        android:orientation="vertical" >
 		        <TextView
 		            style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/planet" />	
-		    </RelativeLayout>
-		
-		    <RelativeLayout
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content" >
+		            android:text="@string/country" />
 		        <EditText
 		            android:id="@+id/new_editText_country"
-		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true" />
-		        <TextView
-					style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/country" />
-		    </RelativeLayout>
+		            style="@style/newWorldEditTextStyle" 
+		            android:inputType="text"/>
+		    </LinearLayout>
 		
-		    <RelativeLayout
+		    <LinearLayout
 		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content" >
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical">
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/city" />
+
 		        <EditText
 		            android:id="@+id/new_editText_city"
-					style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true">
-		        </EditText>
-		        <TextView
-					style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/city" />
-		    </RelativeLayout>
-		
+		            style="@style/newWorldEditTextStyle" 
+		            android:inputType="text"/>
+		    </LinearLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		            
+		    <com.galaxtime.widget.TableRadioButtonGroup
+		        android:id="@+id/new_TableRadioButton_icons"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        <TableRow>
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet1"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_1_mini"/>
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet2"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+						android:drawableLeft="@drawable/plan_2_mini"/>
+		        </TableRow>
+		        <TableRow 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet3"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_3_mini"/>
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet4"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_4_mini" />
+		        </TableRow>
+		        <TableRow 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet5"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_5_mini"/>
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet6"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_6_mini"/>		            
+		        </TableRow>
+		        <TableRow 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet7"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_7_mini"/>
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet8"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_8_mini" />
+		        </TableRow>
+		        <TableRow 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet9"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_9_mini"/>
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet10"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_10_mini"/>
+		        </TableRow>
+		        <TableRow 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet11"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+			            android:drawableLeft="@drawable/plan_11_mini"/>
+			        <RadioButton
+			            android:id="@+id/new_RadioBut_planet12"
+			            style="@style/newWorldRadioButtonStyle"
+			            android:layout_weight="1"
+						android:drawableLeft="@drawable/plan_12_mini" />
+		        </TableRow>
+		    </com.galaxtime.widget.TableRadioButtonGroup>
+
 		    <TextView style="@style/newWorldSeparator"/>
 		    
-		        <RelativeLayout
-		            android:layout_width="match_parent"
-		            android:layout_height="wrap_content" >
-		            <TextView
-		                style="@style/newWorldTextViewStyle"
-		                android:layout_alignParentLeft="true"
-		                android:layout_centerVertical="true"
-		                android:text="@string/date_consists" />
-		        </RelativeLayout>
-		    	<RelativeLayout
-		            android:layout_width="match_parent"
-		            android:layout_height="wrap_content" >
-		            <RadioGroup
-		                android:id="@+id/new_RadioGroup_dateType"
-		                android:layout_width="wrap_content"
-		                android:layout_height="wrap_content"
-		                android:layout_alignParentTop="true">
-		                <RadioButton
-		                    android:id="@+id/new_RadioBut_daysAndYear"
-		                    style="@style/newWorldRadioButtonStyle"
-		                    android:checked="true"
-		                    android:text="@string/day_year" />
-		                <RadioButton
-		                    android:id="@+id/new_RadioBut_daysAndMonthAndYear"
-		                    style="@style/newWorldRadioButtonStyle"
-		                    android:text="@string/day_month_year" />
-		            </RadioGroup>
-		        </RelativeLayout>
-		        
-		    <TextView style="@style/newWorldSeparator"/>
-		
 		    <RelativeLayout
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content" >
-		        <EditText
-		            android:id="@+id/new_editText_daysInYear"
-		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
 		        <TextView
-		            android:id="@+id/new_textView_DaysIn"
 		            style="@style/newWorldTextViewStyle"
 		            android:layout_alignParentLeft="true"
 		            android:layout_centerVertical="true"
-		            android:text="@string/daysInYear" />
+		            android:text="@string/date_consists" />
 		    </RelativeLayout>
-			
 		    <RelativeLayout
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content" >
+		        <RadioGroup
+		            android:id="@+id/new_RadioGroup_dateType"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true">
+		        <RadioButton
+		            android:id="@+id/new_RadioBut_daysAndYear"
+		            style="@style/newWorldRadioButtonStyle"
+		            android:checked="true"
+		            android:text="@string/day_year" />
+		        <RadioButton
+		            android:id="@+id/new_RadioBut_daysAndMonthAndYear"
+		            style="@style/newWorldRadioButtonStyle"
+		            android:text="@string/day_month_year" />
+		        </RadioGroup>
+		    </RelativeLayout>
+
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        <TextView
+		            android:id="@+id/new_textView_EarthDaysInYear"
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/earthDaysInYear" />
+		        <EditText
+		            android:id="@+id/new_editText_EarthDaysInYear"
+		            style="@style/newWorldEditTextStyle"
+		            android:inputType="numberDecimal"/>
+		    </LinearLayout>
+		    
+		    			
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical">
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/monthInYear" />
 		        <EditText
 		            android:id="@+id/new_editText_monthInYear"
 		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
+		            android:inputType="numberDecimal" />
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
 		        <TextView
 		            style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/monthInYear" />
-		    </RelativeLayout>
+		            android:text="@string/daysInMonth" />
+		        <EditText
+		            style="@style/newWorldEditTextStyle"
+		            android:id="@+id/new_editText_daysInMonth"
+		            android:focusable="false"
+		            android:inputType="numberDecimal"
+		            android:enabled="false"/>
+		    </LinearLayout>
 		    
-		    <RelativeLayout
+		    <LinearLayout
 		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content" >
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/daysInYear" />
+		        <EditText
+		            android:id="@+id/new_editText_daysInYear"
+		            style="@style/newWorldEditTextStyle"
+		            android:inputType="numberDecimal"/>
+		    </LinearLayout>
+
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/hoursInDay"/>
 		        <EditText
 		            android:id="@+id/new_EditText_hoursInDay"
 			        style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
-		        <TextView
-		            style="@style/newWorldTextViewStyle"
-					android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/hoursInDay"/>
-		    </RelativeLayout>
+		            android:inputType="numberDecimal" />
+		    </LinearLayout>
 		    
-		    <RelativeLayout
+		    <LinearLayout
 		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content" >
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical">
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+		            android:text="@string/minutesInHour" />
 		        <EditText
 		            android:id="@+id/new_editText_minutesInHour"
 		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true"/>
+		            android:inputType="numberDecimal"/>
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical">
 		        <TextView
 					style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/minutesInHour" />
-		    </RelativeLayout>
-		    
-		    <RelativeLayout
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content" >
+		            android:text="@string/secsInMinute" />
 		        <EditText
 		            android:id="@+id/new_editText_SecsInMinute"
 		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
-		        <TextView
-					style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/secsInMinute" />
-		    </RelativeLayout>
+		            android:inputType="numberDecimal"
+		            android:focusable="false"
+		            android:enabled="false"/>
+		    </LinearLayout>
 		    
 		    <TextView style="@style/newWorldSeparator"/>
 		    
@@ -186,23 +297,23 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentTop="true">
-		            <RadioButton
+		        	<RadioButton
+		                android:id="@+id/new_RadioBut_DD_YY"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/dateThird"
+		                android:checked="true" />
+		        	<RadioButton
 		                android:id="@+id/new_RadioBut_DDxYY"
 		                style="@style/newWorldRadioButtonStyle"
-		                android:checked="true"
 		                android:text="@string/dateFirst" />
+		        	<RadioButton
+		                android:id="@+id/new_RadioBut_DD_MM_YY"
+		                style="@style/newWorldRadioButtonStyle"
+		                android:text="@string/dateFourth" />
 		            <RadioButton
 		                android:id="@+id/new_RadioBut_DDxMMxYY"
 		                style="@style/newWorldRadioButtonStyle"
 		                android:text="@string/dateSecond" />
-		            <RadioButton
-		                android:id="@+id/new_RadioBut_DD_YY"
-		                style="@style/newWorldRadioButtonStyle"
-		                android:text="@string/dateThird" />
-		            <RadioButton
-		                android:id="@+id/new_RadioBut_DD_MM_YY"
-		                style="@style/newWorldRadioButtonStyle"
-		                android:text="@string/dateFourth" />
 		            <RadioButton
 		                android:id="@+id/new_RadioBut_MM_DD_YY"
 		                style="@style/newWorldRadioButtonStyle"
@@ -221,81 +332,54 @@
 		            android:layout_centerVertical="true"
 		            android:text="@string/startTime" />
 		    </RelativeLayout>
-		    <RelativeLayout
+		    <LinearLayout
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:orientation="horizontal" >
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/startYear" />
 		        <EditText
 		            android:id="@+id/new_editText_startYear"
 		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
-		        <TextView
-		            style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/startYear" />	
-		    </RelativeLayout>
-		    <RelativeLayout
+		            android:inputType="number"/>	
+		    </LinearLayout>
+		    <LinearLayout
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:orientation="horizontal" >
-		        <EditText
-		            android:id="@+id/new_editText_startMonth"
-		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
+		        android:orientation="vertical" >
 		        <TextView
 		            style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/startMonth" />	
-		    </RelativeLayout>
-		    <RelativeLayout
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:orientation="horizontal" >
+		            android:text="@string/startDay" />
 		        <EditText
 		            android:id="@+id/new_editText_startDay"
 		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
-		        <TextView
-		            style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/startDay" />	
-		    </RelativeLayout>
-		    <RelativeLayout
+		            android:inputType="number"/>	
+		    </LinearLayout>
+		    <LinearLayout
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:orientation="horizontal" >
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/startHour" />
 		        <EditText
 		            android:id="@+id/new_editText_startHour"
 		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
-		        <TextView
-		            style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/startHour" />	
-		    </RelativeLayout>
-		    <RelativeLayout
+		            android:inputType="number"/>	
+		    </LinearLayout>
+		    <LinearLayout
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:orientation="horizontal" >
+		        android:orientation="vertical" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/startMinute" />
 		        <EditText
 		            android:id="@+id/new_editText_startMinute"
 		            style="@style/newWorldEditTextStyle"
-		            android:layout_alignParentRight="true"
-		            android:layout_alignParentTop="true" />
-		        <TextView
-		            style="@style/newWorldTextViewStyle"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:text="@string/startMinute" />	
-		    </RelativeLayout>
+		            android:inputType="number"/>	
+		    </LinearLayout>
 		    
 		    <TextView style="@style/newWorldSeparator"/>
 		    
@@ -313,15 +397,15 @@
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content" >
 		        <RadioGroup
-		            android:id="@+id/new_RadioBut_typeTemp"
+		            android:id="@+id/new_RadioGroup_typeTemp"
 		            android:layout_width="fill_parent"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentTop="true">
 		            <RadioButton
 		                android:id="@+id/new_RadioBut_celsij"
 		                style="@style/newWorldRadioButtonStyle"
-		                android:checked="true"
-		                android:text="@string/celsij" />
+		                android:text="@string/celsij"
+		                android:checked="true"/>
 		            <RadioButton
 		                android:id="@+id/new_RadioBut_farengeit"
 		                style="@style/newWorldRadioButtonStyle"
@@ -333,29 +417,234 @@
 		        </RadioGroup>
 		    </RelativeLayout>
 		    
+		     <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				
+		        <RadioGroup android:id="@+id/new_radioGroup_maxTempSign"
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content">
+		            <RadioButton 
+		                android:id="@+id/new_RadioBut_maxPlus"
+		                style="@style/newWorldRadioButtonStyle"
+		            	android:layout_weight="1"
+		            	android:checked="true"
+		            	android:text="@string/plus"/>
+		            <RadioButton 
+		                android:id="@+id/new_RadioBut_maxMinus"
+		                style="@style/newWorldRadioButtonStyle"
+		            	android:layout_weight="1"
+		            	android:text="@string/minus"/>
+		        </RadioGroup>
+		        <EditText
+		            android:id="@+id/new_editText_maxTemp"
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content"
+		            android:layout_weight="1"
+		            android:text="@string/max"
+		            android:gravity="center"
+		            android:inputType="number"
+		            android:layout_gravity="center"/>
+		        
+				<RadioGroup android:id="@+id/new_RadioGroup_minTempSign"
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content">
+		            <RadioButton 
+		                android:id="@+id/new_RadioBut_minPlus"
+		                style="@style/newWorldRadioButtonStyle"
+		            	android:layout_weight="1"
+		            	android:checked="true"
+		            	android:text="@string/plus"/>
+		            <RadioButton 
+		                android:id="@+id/new_RadioBut_minMinus"
+		                style="@style/newWorldRadioButtonStyle"
+		            	android:layout_weight="1"
+		            	android:text="@string/minus"/>
+		        </RadioGroup>
+		        <EditText
+		            android:id="@+id/new_editText_minTemp"
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content"
+		            android:layout_weight="1"
+		            android:layout_marginRight="15dp"
+		            android:text="@string/min"
+		            android:gravity="center"
+		            android:inputType="number"
+		            android:layout_gravity="center" />
+		    </LinearLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		    
 		    <RelativeLayout
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content" >
-		        <RadioGroup
-		            android:id="@+id/maxTempSign"
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/theColdestTime" />
+		    </RelativeLayout>	
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <EditText
+		            android:id="@+id/new_editText_coldestTime"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_marginLeft="15dp"
 		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:layout_alignParentTop="true">
-		            <RadioButton
-		                android:id="@+id/new_RadioBut_maxTempPlus"
-		                style="@style/newWorldRadioButtonStyle"
-		                android:checked="true"
-		                android:text="+" />
-		            <RadioButton
-		                android:id="@+id/new_RadioBut_maxTempPlus"
-		                style="@style/newWorldRadioButtonStyle"
-		                android:text="-" />
-		        </RadioGroup>
-
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true" 
+		            android:inputType="number"/>
 		    </RelativeLayout>
-		        
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:text="@string/theWarmestTime" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <EditText
+		            android:id="@+id/new_editText_warmestTime"
+		            style="@style/newWorldEditTextStyle"
+		            android:layout_marginLeft="15dp"
+		            android:layout_width="fill_parent"
+		            android:layout_alignParentRight="true"
+		            android:layout_alignParentTop="true"
+		            android:inputType="number" />
+		    </RelativeLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <TextView
+		            style="@style/newWorldTextViewStyle"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/weather" />
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"  >
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather1"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/rain" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather2"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/snow" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather3"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/storm" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather4"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/volcano" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather5"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/other" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather6"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/other" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather7"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/other" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather8"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/other" />
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_weather9"
+		            style="@style/newWorldCheckBoxStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/other" />
+		    </RelativeLayout>
+		    
+		    <TextView style="@style/newWorldSeparator"/>
+		    
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+		        <TextView
+					style="@style/newWorldTextViewStyle"
+					android:layout_gravity="center"
+		            android:text="@string/yourBirthday"/>
+		        <DatePicker
+		            android:id="@+id/new_datePicker_birthday"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center" />
+		        <CheckBox
+		            android:id="@+id/new_CheckBox_birthdayAlarm"
+		            style="@style/newWorldTextViewStyle"
+		            android:text="@string/birthdayAlarm" />
+		    </LinearLayout>
+		    
+		    
 		    <Button
-				android:id="@+id/button_saveWorld"
+				android:id="@+id/new_button_SaveWorld"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:text="@string/createWorld" />

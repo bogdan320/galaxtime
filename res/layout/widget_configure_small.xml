@@ -1,65 +1,78 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
-    android:layout_height="146dp"
-    android:background="@drawable/widget_background" >
-
-    <TextView
-        android:id="@+id/widget_small_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="6dp"
-        android:text="00:00"
-        android:textColor="#ff0000"
-        android:textSize="56dp" />
-
-    <ImageView
-        android:id="@+id/widget_small_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="6dp"
-        android:src="@drawable/ic_launcher" />
+    android:background="@drawable/background_smal" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
     <TextView
         android:id="@+id/widget_small_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
+        style="@style/smallWidgetTextStyle"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="TextView"
-        android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Date" />
 
-    <Button
-        android:id="@+id/widget_small_but"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/widget_small_time"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="Button" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_centerVertical="true" />
 
     <TextView
         android:id="@+id/widget_small_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/smallWidgetTextStyle"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="30"
-        android:textColor="#ffffff" />getStartingYear()
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="8dp"
+        android:text="age" />
 
-    <TextView
-        android:id="@+id/widget_small_planetName"
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" >
+        <ImageView
+            android:id="@+id/widget_small_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/plan_1" />
+        <TextView
+            android:id="@+id/widget_small_planetName"
+            style="@style/smallWidgetTextStyle"
+            android:layout_centerInParent="true"
+            android:text="planet" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/widget_small_weather"
+        style="@style/smallWidgetTextStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"
         android:layout_marginRight="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_below="@+id/widget_small_image"
-        android:text="Земля"
-        android:textColor="#ffffff" />
+        android:text="weather" />
+
+    <TextView
+        android:id="@+id/widget_small_temperature"
+        style="@style/smallWidgetTextStyle"
+        android:layout_alignBottom="@+id/relativeLayout1"
+        android:layout_toLeftOf="@+id/relativeLayout1"
+        android:layout_marginRight="6dp"
+        android:text="Temperature" />
+
+    <TextView
+        android:id="@+id/widget_small_timeOfDay"
+        style="@style/smallWidgetTextStyle"
+        android:layout_alignTop="@+id/relativeLayout1"
+        android:layout_toLeftOf="@+id/relativeLayout1"
+        android:layout_marginRight="6dp"
+        android:text="timeOfDay" />
 
 </RelativeLayout>

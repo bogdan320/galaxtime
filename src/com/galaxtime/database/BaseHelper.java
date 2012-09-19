@@ -24,17 +24,20 @@ public class BaseHelper extends SQLiteOpenHelper implements BaseColumns{
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE "+TABLE_NAME+"(" +
 				BaseHelper._ID+" INTEGER PRIMARY KEY AUTOINCREMENT, " 
-				+ColumnNames.PLANET_NAME+" TEXT, "+ColumnNames.COUNTRY_NAME+" TEXT, "
-				+ColumnNames.CITY_NAME+" TEXT, "+ ColumnNames.DAYS_IN_YEAR+" INTEGER, "
-				+ColumnNames.MONTH_IN_YEAR+" INTEGER, "+ColumnNames.DATE_VIEW+" INTEGER, "
-				+ColumnNames.HOURS_IN_DAY+" INTEGER, "+ColumnNames.MINUTES_IN_HOUR+" TEXT, "
-				+ColumnNames.SEСS_IN_MINUTE+" TEXT, "+ColumnNames.CALL_YEAR+" TEXT, "
-				+ColumnNames.CALL_DAY+" TEXT, "+ColumnNames.MAX_TEMPERATURE+" INTEGER, "
-				+ColumnNames.MIN_TEMPERATURE+" INTEGER, "+ ColumnNames.COLDEST_TIME+" INTEGER, "
-				+ColumnNames.WARMEST_TIME+" INTEGER, "+ColumnNames.PICTURE_INDEX+" INTEGER, "
-				+ColumnNames.STARTING_YEAR+" INTEGER, "+ColumnNames.STARTING_MONTH+" INTEGER, "
+				+ColumnNames.PLANET_NAME+" TEXT UNIQUE, "+ColumnNames.COUNTRY_NAME+" TEXT, "
+				+ColumnNames.CITY_NAME+" TEXT, "+ ColumnNames.DAYS_IN_YEAR+" FLOAT, "
+				+ColumnNames.EARTH_DAYS_IN_YEAR+" FLOAT, "+ColumnNames.DAYS_IN_MONTH+" FLOAT, "
+				+ColumnNames.MONTH_IN_YEAR+" FLOAT, "+ColumnNames.DATE_VIEW+" TEXT, "
+				+ColumnNames.HOURS_IN_DAY+" FLOAT, "+ColumnNames.MINUTES_IN_HOUR+" FLOAT, "
+				+ColumnNames.SEСS_IN_MINUTE+" FLOAT, "+ColumnNames.MAX_TEMPERATURE+" TEXT, "
+				+ColumnNames.MIN_TEMPERATURE+" TEXT, "+ ColumnNames.COLDEST_TIME+" INTEGER, "
+				+ColumnNames.WARMEST_TIME+" INTEGER, "+ColumnNames.STARTING_YEAR+" INTEGER, "
 				+ColumnNames.STARTING_DAY+" INTEGER, "+ColumnNames.STARTING_HOUR+" INTEGER, "
-				+ColumnNames.STARTING_MINUTE+" INTEGER, "+ColumnNames.BIRTHDAY+" TEXT);");
+				+ColumnNames.STARTING_MINUTE+" INTEGER, "+ColumnNames.BIRTHDAY_DAY+" INTEGER, "
+				+ColumnNames.BIRTHDAY_MONTH+" INTEGER, "+ColumnNames.BIRTHDAY_YEAR+" INTEGER, " 
+				+ColumnNames.WEATHER+" TEXT, "+ColumnNames.WEATHER_CHECKED+" TEXT,"
+				+ColumnNames.WEATHER_ALL+" TEXT, "+ColumnNames.ICON+" TEXT, " 
+				+ColumnNames.BIRTHDAY_ALARM+" INTEGER);");
 	}
 
 	@Override
